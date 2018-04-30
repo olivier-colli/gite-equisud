@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang=fr>
-  <head>
     <meta charset=utf-8>
     <meta name=viewport content="width=device-width, initial-scale=1">
     <title>Gîte Equisud - Les Angles</title>
@@ -11,23 +10,42 @@
     <link rel=stylesheet href=css/styles-merged.css>
     <link rel=stylesheet href=css/style.min.css>
     <link rel=stylesheet href=css/equisud.css>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108901544-2"></script>
+    <script async src=https://www.googletagmanager.com/gtag/js?id=UA-108901544-2></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
     
       gtag('config', 'UA-108901544-2');
+
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector('.js-static-modal-toggle').addEventListener('click', () => {
+          new Modal({el: document.getElementById('booking-modal')}).show()
+        })
+      })
+
     </script>
 
     <!--[if lt IE 9]>
       <script src=js/vendor/html5shiv.min.js></script>
       <script src=js/vendor/respond.min.js></script>
     <![endif]-->
-  </head>
-  <body>
     
     <!-- Fixed navbar -->
+
+    <div id=booking-modal class="modal fade" tabindex=-1 role=dialog>
+      <div class=modal-dialog>
+        <div class=modal-content>
+          <div class=modal-header>
+            <button type=button class=close data-dismiss=modal aria-label=Close><span aria-hidden=true>×</span></button>
+            <h4 class=modal-title>Réservation</h4>
+          </div>
+          <div class=modal-body>
+            <iframe src=http://pyrenees-prestataire-chambre.for-system.com/f38936_fr-.aspx></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <nav class="navbar navbar-default navbar-fixed-top probootstrap-navbar">
       <div class=container>
@@ -41,7 +59,7 @@
           <a class="navbar-brand" href="index.html" title="uiCookies:FineOak">FineOak</a>
         </div>
 
-        <div id="navbar-collapse" class="navbar-collapse collapse">
+        <div id=navbar-collapse class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class=active><a href=# data-nav-section=welcome>Bienvenue</a></li>
             <li><a href=# data-nav-section=menu>Hébergement</a></li>
@@ -55,7 +73,7 @@
     </nav>
 
     <section class=flexslider data-section=welcome>
-      <ul class="slides">
+      <ul class=slides>
         <li style="background-image: url(img/hero_bg_1.jpg)" class=overlay data-stellar-background-ratio="0.5">
           <div class=container>
             <div class=row>
@@ -84,7 +102,7 @@
           
         </li>
         <li style="background-image: url(img/hero_bg_3.jpg)" class="overlay">
-          <div class="container">
+          <div class=container>
             <div class=row>
               <div class="col-md-8 col-md-offset-2">
                 <div class="probootstrap-slider-text text-center probootstrap-animate probootstrap-heading">
@@ -100,28 +118,27 @@
     </section>
 
     <section class="probootstrap-section probootstrap-bg-white">
-      <div class="container">
+      <div class=container>
         <div class=row>
           <div class="col-md-5 text-center probootstrap-animate">
             <div class="probootstrap-heading dark">
               <h1 class=primary-heading>Découvrez</h1>
               <h3 class=secondary-heading>Notre gîte</h3>
-              <span class="seperator">* * *</span>
+              <span class=seperator>* * *</span>
             </div>
             <p>Été comme hiver, nous vous accueillons aux Angles dans la vallée du Capcir. 24 places sont à votre disposition réparties sur un dortoir de huit personnes et quatre chambres familiales équipées de salles de bain et de toilettes individuelles.</p>
-            <p><a href="#" class="probootstrap-custom-link">About Us</a></p>
+            <p><a href=# class="js-static-modal-toggle probootstrap-custom-link">Réserver</a></p>
           </div>
           <div class="col-md-6 col-md-push-1 probootstrap-animate">
             <p><img src="img/img_1.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></p>
           </div>
         </div>
-        <!-- END row -->
       </div>
     </section>
 
 
     <section class="probootstrap-section-bg overlay" style="background-image: url(img/hero_bg_7.jpg);"  data-stellar-background-ratio="0.5"  data-section="menu">
-      <div class="container">
+      <div class=container>
         <div class=row>
           <div class="col-md-12 text-center probootstrap-animate">
             <div class="probootstrap-heading">
@@ -134,7 +151,7 @@
     </section>
 
     <section class="probootstrap-section probootstrap-bg-white">
-      <div class="container">
+      <div class=container>
         <div class=row>
           <div class="col-md-4 col-sm-4 probootstrap-animate">
             <div class="probootstrap-block-image">
@@ -161,7 +178,7 @@
     </section>
 
     <section class="probootstrap-section-bg overlay" style="background-image: url(img/hero_bg_5.jpg);"  data-stellar-background-ratio="0.5" data-section="reservation">
-      <div class="container">
+      <div class=container>
         <div class=row>
           <div class="col-md-12 text-center probootstrap-animate">
             <div class="probootstrap-heading">
@@ -174,7 +191,7 @@
     </section>
 
     <section class="probootstrap-section probootstrap-bg-white">
-      <div class="container">
+      <div class=container>
           <div class="col-md-12 probootstrap-animate">
               <table class="table table-striped table-hover"> 
                   <tbody>
@@ -225,7 +242,7 @@
     </section>
 
     <section class="probootstrap-section-bg overlay" style="background-image: url(img/hero_bg_6.jpg);" data-stellar-background-ratio="0.5" data-section="specialties">
-      <div class="container">
+      <div class=container>
         <div class=row>
           <div class="col-md-12 text-center probootstrap-animate">
             <div class="probootstrap-heading">
@@ -238,7 +255,7 @@
     </section>
      <!-- probootstrap-bg-white -->
     <section class="probootstrap-section">
-      <div class="container">
+      <div class=container>
         <div class=row>
           <div class="probootstrap-cell-retro">
             <div class="half">
@@ -303,7 +320,7 @@
     </section>
 
     <section class="probootstrap-section-bg overlay" style="background-image: url(img/hero_bg_4.jpg);"  data-stellar-background-ratio="0.5" data-section="events">
-      <div class="container">
+      <div class=container>
         <div class=row>
           <div class="col-md-12 text-center probootstrap-animate">
             <div class="probootstrap-heading">
@@ -423,7 +440,7 @@
     </section>
 
     <section class="probootstrap-footer">
-      <div class="container">
+      <div class=container>
         <div class=row>
           <div class="col-md-6 probootstrap-animate">
             <div class="probootstrap-footer-widget">
@@ -452,11 +469,11 @@
         </div>
       </div>
     </section>
-    <section class="probootstrap-copyright">
-      <div class="container">
+    <section class=probootstrap-copyright>
+      <div class=container>
         <div class=row>
-          <div class="col-md-8">
-            <p class="copyright-text">&copy; 2017 <a href="https://uicookies.com/">uiCookies:Resto</a></p>
+          <div class=col-md-8>
+            <p class=copyright-text>&copy; 2017 <a href"https://uicookies.com/>uiCookies:Resto</a></p>
           </div>
           <div class=col-md-4>
             <ul class="probootstrap-footer-social right">
@@ -467,9 +484,7 @@
         </div>
       </div>
     </section>
-
-    <script src="js/scripts.min.js"></script>
-    <script src="js/custom.min.js"></script>
-
-  </body>
+    <script src=js/scripts.min.js></script>
+    <script src=js/custom.min.js></script>
+    <script src=js/modal.js></script>
 </html>
